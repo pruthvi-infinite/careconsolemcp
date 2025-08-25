@@ -1,0 +1,40 @@
+{
+  "terraform.experimentalFeatures.validateOnSave": true,
+  "terraform.experimentalFeatures.prefillRequiredFields": true,
+  "terraform.languageServer.enable": true,
+  "terraform.languageServer.args": ["serve"],
+  "files.associations": {
+    "*.tf": "terraform",
+    "*.tfvars": "terraform-vars",
+    "*.tfstate": "json",
+    "*.tfstate.backup": "json"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.formatDocument": "explicit"
+    }
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true
+  },
+  "terraform.validation.enableEnhancedValidation": true,
+  "editor.suggest.showWords": false,
+  "editor.suggest.showSnippets": true,
+  "editor.tabCompletion": "on",
+  "mcp": {
+    "servers": {
+      "terraform": {
+        "command": "docker",
+        "args": ["run", "-i", "--rm", "hashicorp/terraform-mcp-server"]
+      }
+    }
+  }
+}
